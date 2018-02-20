@@ -11792,7 +11792,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># comparing peptide intensities to protein intensities</span>
@@ -11849,15 +11849,7 @@ proteins <span class="o">&lt;-</span> protein_start<span class="p">[</span><span
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>── Attaching packages ─────────────────────────────────────── tidyverse 1.2.1 ──
-✔ ggplot2 2.2.1     ✔ purrr   0.2.4
-✔ tibble  1.4.2     ✔ dplyr   0.7.4
-✔ tidyr   0.8.0     ✔ stringr 1.2.0
-✔ readr   1.1.1     ✔ forcats 0.2.0
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-Parsed with column specification:
+<pre>Parsed with column specification:
 cols(
   height_126 = col_double(),
   height_127_N = col_double(),
@@ -12101,7 +12093,7 @@ cols(
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># compare some intensity (peak heights) distributions</span>
@@ -14668,7 +14660,7 @@ AQIECBAgQIAAAQIECMxP4L+AqeF0+wZdtgAAAABJRU5ErkJggg=="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># see what we have in the columns at each level of aggregation</span>
@@ -14814,7 +14806,7 @@ AQIECBAgQIAAAQIECMxP4L+AqeF0+wZdtgAAAABJRU5ErkJggg=="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># create an average vector for the x-axis</span>
@@ -14881,7 +14873,7 @@ gproteins <span class="o">&lt;-</span> gather<span class="p">(</span>proteins<sp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>data <span class="o">=</span> gpsms<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> ref<span class="p">,</span> y <span class="o">=</span> intensity<span class="p">))</span> <span class="o">+</span>
@@ -23502,7 +23494,7 @@ QvgAAAAASUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>data <span class="o">=</span> gpeptides<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> ref<span class="p">,</span> y <span class="o">=</span> intensity<span class="p">))</span> <span class="o">+</span>
@@ -30880,7 +30872,7 @@ AAAASUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>data <span class="o">=</span> gproteins<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> ref<span class="p">,</span> y <span class="o">=</span> intensity<span class="p">))</span> <span class="o">+</span>
@@ -36676,6 +36668,406 @@ SUVORK5CYII="
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aside:-Exploring-normalizations-in-edgeR">Aside: Exploring normalizations in edgeR<a class="anchor-link" href="#Aside:-Exploring-normalizations-in-edgeR">&#182;</a></h2><p>The data above shows that there is less scatter in the data around the trend lines for proteins compared to peptides or PSMs. How can we quantify that? We expect each protein's relative abundances to mirror the dilution factor. We could compute vectors of ratios for each dilution series and see how "tight" the distributions are using something like the interquartile range. However, that would give us 6 distributions to look at. We are not really interested in accuracy for this question, so we do not care if the ratios are what we expect. We would probably need to worry about isotopic correction factors in adjacent channels to really get the best accuracy anyway.</p>
+<p>If we normalize the data, we can get the 6 samples on a similar scale and then compute the CV for each row (either individual PSMs, peptides, or proteins) and look at the distribution of CV values. Lowest median CV wins this competition.</p>
+<p>We have many options for normalizing. We can use the known dilution factors to "undo" the pipetting differences. We can also fire up edgeR and use its internal normalization algorithms. This is interesting because the normalization factors in edgeR can seem rather confusing.</p>
+<p>The first confusion in edgeR is that there are really two coupled normalization factors. After loading data into a DGEList object in edgeR, you can examine the object. This is a "list" object in R, a heterogeneous data container. The table of data values (counts for RNA-Seq or intensities for TMT) is a data frame ("\$counts") in the list. Another data frame is the "\$sample" information. This has sample names, group memberships (e.g. control or treatment), library sizes, (potentially) TMM normalization factors.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># load edgeR and then put data into DGEList objects</span>
+<span class="kn">library</span><span class="p">(</span>edgeR<span class="p">)</span>
+y_psms  <span class="o">&lt;-</span> DGEList<span class="p">(</span>counts <span class="o">=</span> psms<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">],</span> group <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">labels</span><span class="p">))</span>
+y_peptides  <span class="o">&lt;-</span> DGEList<span class="p">(</span>counts <span class="o">=</span> peptides<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">],</span> group <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">labels</span><span class="p">))</span>
+y_proteins  <span class="o">&lt;-</span> DGEList<span class="p">(</span>counts <span class="o">=</span> proteins<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">],</span> group <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="kp">labels</span><span class="p">))</span>
+y_psms<span class="o">$</span>samples
+<span class="c1"># y_peptides$samples</span>
+<span class="c1"># y_proteins$samples</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<thead><tr><th></th><th scope=col>group</th><th scope=col>lib.size</th><th scope=col>norm.factors</th></tr></thead>
+<tbody>
+	<tr><th scope=row>a_25</th><td>a_25      </td><td>3827241213</td><td>1         </td></tr>
+	<tr><th scope=row>b_20</th><td>b_20      </td><td>3088914690</td><td>1         </td></tr>
+	<tr><th scope=row>c_15</th><td>c_15      </td><td>2363152704</td><td>1         </td></tr>
+	<tr><th scope=row>d_10</th><td>d_10      </td><td>1665392787</td><td>1         </td></tr>
+	<tr><th scope=row>e_5</th><td>e_5       </td><td> 778998204</td><td>1         </td></tr>
+	<tr><th scope=row>f_2.5</th><td>f_2.5     </td><td> 434946648</td><td>1         </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="lib.size-column-is-important">lib.size column is important<a class="anchor-link" href="#lib.size-column-is-important">&#182;</a></h2><p>Data is adjusted by library size in edgeR. What does that mean? It means that each column is going to be divided by the library size (the column sum) in many contexts. edgeR has a "cpm" function that puts the data on a counts-per-million scale. For fun, let's do some manipulations of the psm data:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># these are the original column sums (they will match the library sizes)</span>
+<span class="kp">round</span><span class="p">(</span><span class="kp">colSums</span><span class="p">(</span>psms<span class="p">),</span> <span class="m">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>a_25</dt>
+		<dd>3827241213</dd>
+	<dt>b_20</dt>
+		<dd>3088914690</dd>
+	<dt>c_15</dt>
+		<dd>2363152704</dd>
+	<dt>d_10</dt>
+		<dd>1665392787</dd>
+	<dt>e_5</dt>
+		<dd>778998204</dd>
+	<dt>f_2.5</dt>
+		<dd>434946648</dd>
+	<dt>ref</dt>
+		<dd>2026441041</dd>
+</dl>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># dividing by library sizes makes each sample sum to 1.o</span>
+<span class="kp">colSums</span><span class="p">(</span><span class="kp">sweep</span><span class="p">(</span>psms<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> y_psms<span class="o">$</span>samples<span class="o">$</span>lib.size<span class="p">,</span> FUN <span class="o">=</span> <span class="s">&quot;/&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>a_25</dt>
+		<dd>1</dd>
+	<dt>b_20</dt>
+		<dd>1</dd>
+	<dt>c_15</dt>
+		<dd>1</dd>
+	<dt>d_10</dt>
+		<dd>1</dd>
+	<dt>e_5</dt>
+		<dd>1</dd>
+	<dt>f_2.5</dt>
+		<dd>1</dd>
+</dl>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="kp">colSums</span><span class="p">(</span>cpm<span class="p">(</span>y_psms<span class="p">))</span>
+<span class="kp">sum</span><span class="p">(</span><span class="kp">colSums</span><span class="p">(</span>cpm<span class="p">(</span>y_psms<span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>a_25</dt>
+		<dd>1e+06</dd>
+	<dt>b_20</dt>
+		<dd>1e+06</dd>
+	<dt>c_15</dt>
+		<dd>1e+06</dd>
+	<dt>d_10</dt>
+		<dd>1e+06</dd>
+	<dt>e_5</dt>
+		<dd>1e+06</dd>
+	<dt>f_2.5</dt>
+		<dd>1e+06</dd>
+</dl>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+6e+06
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-library-size-scales-each-sample-to-unity">The library size scales each sample to unity<a class="anchor-link" href="#The-library-size-scales-each-sample-to-unity">&#182;</a></h2><p>We see that the library sizes are just the column sums of the original data. If we divide each row by the library sum (the column total) we will make each sample sum up to 1.0. The "cpm" function divides each column by its library size (makes them 1.0) then multiples the column by one million.</p>
+<p>We can run the trimmed mean of M-values algorithm and look at the "normalization" factors.</p>
+<blockquote><p>Robinson, M.D. and Oshlack, A., 2010. A scaling normalization method for differential expression analysis of RNA-seq data. Genome biology, 11(3), p.R25.</p>
+</blockquote>
+<p>Then we can re-run the "cpm" function after the TMM step and see if the result is the same as above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># compute TMM factors - they get added to $samples</span>
+y_psms_2 <span class="o">&lt;-</span> calcNormFactors<span class="p">(</span>y_psms<span class="p">)</span>
+<span class="kp">round</span><span class="p">(</span>y_psms_2<span class="o">$</span>samples<span class="o">$</span>norm.factors<span class="p">,</span> <span class="m">6</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>1.014546</li>
+	<li>1.008467</li>
+	<li>1.011007</li>
+	<li>0.998596</li>
+	<li>0.994266</li>
+	<li>0.973688</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># see what column sums we get after a cpm function call now that there are TMM factors</span>
+<span class="kp">round</span><span class="p">(</span><span class="kp">colSums</span><span class="p">(</span>cpm<span class="p">(</span>y_psms_2<span class="p">)),</span> <span class="m">0</span><span class="p">)</span>
+<span class="kp">round</span><span class="p">(</span><span class="kp">sum</span><span class="p">(</span><span class="kp">colSums</span><span class="p">(</span>cpm<span class="p">(</span>y_psms_2<span class="p">))),</span> <span class="m">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>a_25</dt>
+		<dd>985662</dd>
+	<dt>b_20</dt>
+		<dd>991604</dd>
+	<dt>c_15</dt>
+		<dd>989113</dd>
+	<dt>d_10</dt>
+		<dd>1001406</dd>
+	<dt>e_5</dt>
+		<dd>1005767</dd>
+	<dt>f_2.5</dt>
+		<dd>1027023</dd>
+</dl>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+6000575
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="norm.factors-are-not-what-might-be-guessed">norm.factors are not what might be guessed<a class="anchor-link" href="#norm.factors-are-not-what-might-be-guessed">&#182;</a></h2><p>The libraries are very different in size (due to the sample dilutions), yet the "norm.factors" are all close to 1.0. This is because the TMM factors are in <strong>addition</strong> to the library size scaling. The way the "norm.factors" work is to adjust the effective library sizes. If the "lib.size" values are multiplied by the "norm.factors", then the column divided by the effective library size, you get the TMM normalized result.</p>
+<p>If we call the "cpm" function after we have done the TMM normalization, we no longer get one million for each column total. Some column totals are a bit more and some are a bit less than 1 million. The grand total is still basically 6 million (within rounding errors).</p>
+<p>We can compute the normalization factors by hand (below) and make our own cpm data frame. We will get the same column totals as above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span>real_factors <span class="o">&lt;-</span> <span class="m">1</span> <span class="o">/</span> <span class="p">(</span>y_psms_2<span class="o">$</span>samples<span class="o">$</span>lib.size <span class="o">*</span> y_psms_2<span class="o">$</span>samples<span class="o">$</span>norm.factors<span class="p">)</span>
+by_hand_cpm <span class="o">&lt;-</span> <span class="m">1000000</span> <span class="o">*</span> <span class="kp">sweep</span><span class="p">(</span>psms<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">],</span> <span class="m">2</span><span class="p">,</span> real_factors<span class="p">,</span> FUN <span class="o">=</span> <span class="s">&quot;*&quot;</span><span class="p">)</span>
+<span class="kp">round</span><span class="p">(</span><span class="kp">colSums</span><span class="p">(</span>by_hand_cpm<span class="p">),</span> <span class="m">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<dl class=dl-horizontal>
+	<dt>a_25</dt>
+		<dd>985662</dd>
+	<dt>b_20</dt>
+		<dd>991604</dd>
+	<dt>c_15</dt>
+		<dd>989113</dd>
+	<dt>d_10</dt>
+		<dd>1001406</dd>
+	<dt>e_5</dt>
+		<dd>1005767</dd>
+	<dt>f_2.5</dt>
+		<dd>1027023</dd>
+</dl>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Based-on-the-dilution-factors,-scale-the-data-to-a-common-scale-and-compute-CVs-for-PSMs,-peptides,-and-proteins">Based on the dilution factors, scale the data to a common scale and compute CVs for PSMs, peptides, and proteins<a class="anchor-link" href="#Based-on-the-dilution-factors,-scale-the-data-to-a-common-scale-and-compute-CVs-for-PSMs,-peptides,-and-proteins">&#182;</a></h2><p>We know the expected dilution factors and could adjust by those. We can also take the column totals and adjust by the ratio of those. The later was done to put all 6 channels on a similar scale, and the coefficients of variance (CVs) were computed. We will print out the distribution summaries and compare boxplots.</p>
 
 </div>
@@ -36683,11 +37075,10 @@ SUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># define a function for scaling data and computing CVs</span>
-temp <span class="o">&lt;-</span> psms<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">]</span>
 compute_cv <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>temp<span class="p">)</span> <span class="p">{</span>
   middle <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">25</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2.5</span><span class="p">)</span>
   middle <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">22.26</span><span class="p">,</span> <span class="m">17.60</span><span class="p">,</span> <span class="m">13.56</span><span class="p">,</span> <span class="m">9.43</span><span class="p">,</span> <span class="m">4.50</span><span class="p">,</span> <span class="m">2.50</span><span class="p">)</span>
@@ -36763,7 +37154,81 @@ compute_cv <span class="o">&lt;-</span> <span class="kr">function</span><span cl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># we can also let edgeR scale the data for us</span>
+<span class="c1"># combine the library size and TMM factors (i.e. normalize the data)</span>
+y_psms_norm <span class="o">&lt;-</span> calcNormFactors<span class="p">(</span>y_psms<span class="p">)</span>
+y_peptides_norm <span class="o">&lt;-</span> calcNormFactors<span class="p">(</span>y_peptides<span class="p">)</span>
+y_proteins_norm <span class="o">&lt;-</span> calcNormFactors<span class="p">(</span>y_proteins<span class="p">)</span>
+<span class="c1"># we can compute the CVs on the cpm function returned objects</span>
+cv_psms <span class="o">&lt;-</span> <span class="m">100</span> <span class="o">*</span> <span class="kp">apply</span><span class="p">(</span>cpm<span class="p">(</span>y_psms_norm<span class="p">),</span> <span class="m">1</span><span class="p">,</span> sd<span class="p">)</span> <span class="o">/</span> <span class="kp">rowMeans</span><span class="p">(</span>cpm<span class="p">(</span>y_psms_norm<span class="p">))</span>
+cv_peptides <span class="o">&lt;-</span> <span class="m">100</span> <span class="o">*</span> <span class="kp">apply</span><span class="p">(</span>cpm<span class="p">(</span>y_peptides_norm<span class="p">),</span> <span class="m">1</span><span class="p">,</span> sd<span class="p">)</span> <span class="o">/</span> <span class="kp">rowMeans</span><span class="p">(</span>cpm<span class="p">(</span>y_peptides_norm<span class="p">))</span>
+cv_proteins <span class="o">&lt;-</span> <span class="m">100</span> <span class="o">*</span> <span class="kp">apply</span><span class="p">(</span>cpm<span class="p">(</span>y_proteins_norm<span class="p">),</span> <span class="m">1</span><span class="p">,</span> sd<span class="p">)</span> <span class="o">/</span> <span class="kp">rowMeans</span><span class="p">(</span>cpm<span class="p">(</span>y_proteins_norm<span class="p">))</span>
+<span class="c1"># check the distributions</span>
+<span class="kp">summary</span><span class="p">(</span>cv_psms<span class="p">)</span>
+<span class="kp">summary</span><span class="p">(</span>cv_peptides<span class="p">)</span>
+<span class="kp">summary</span><span class="p">(</span>cv_proteins<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.7889   8.2452  13.8668  18.0959  23.6169 241.4582 </pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.8534   6.9314  11.2061  14.1965  19.2097 165.1362 </pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+  0.3535   3.7404   6.4626  11.9724  12.7305 145.1389 </pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># compare some box plots of the CV distributions</span>
