@@ -1,4 +1,6 @@
 ## Analysis of a three TMT labeling experiment of the developing mouse lens processed with MaxQuant 1.5.7.4. 
+**Click on the Jupyter notebook file (_multiple_TMT_MQ.ipynb_) to see the notebook in your browser. It may take a minute for the page to render and load, so please be patient.**
+
 The data is SPS (multi-notch) MS3 of 10-plex TMT. There are 6 developmental time points in each of three TMT experiments. Despite the lack of any common reference channels, the balanced experiment design lends itself to an internal reference scaling like treatment using the TMT experiment averages as proxies for standards.
 
 ## Data from this publication:
