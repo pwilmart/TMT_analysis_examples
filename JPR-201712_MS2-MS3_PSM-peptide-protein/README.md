@@ -1,4 +1,6 @@
 # JPR-201712_MS2-MS3_PSM-peptide-protein
+**Click on the Jupyter notebook file (_MS2MS3_peptides_proteins.ipynb_) to see the notebook in your browser. It may take a minute for the page to render and load, so please be patient.**
+
 In shotgun (bottom-up) proteomics experiments there can be a lot of data redundancy. There can be multiple MS2 scans acquired for the same analyte. There can be multiple PSM (the sequences matched to the MS2 scans) to the same sequence form (a peptide sequence in a given modification state). There can be multiple peptide forms of the same peptide sequence. There can be (and usually are) multiple peptides from the same protein.
 
 This leads to many questions. Is it better to have lots of lower quality data points? Or is it better to try and aggregate the data into fewer, higher-quality measures? What level of aggregations are better? What kind of aggregation operation to use?
