@@ -1,5 +1,5 @@
 # Anaysis of a dilution series
-**Click on the Jupyter notebook file (_MAN1353_peptides_proteins.ipynb_) to see the notebook in your browser. It may take a minute for the page to render and load so please be patient.**
+**Click on the Jupyter notebook file (_MAN1353_peptides_proteins.ipynb_) to see the notebook in your browser. It may take a minute for the page to render and load, so please be patient.**
 
 The sample is a mouse brain prep that was digested, split into 6 aliquots, digested, and TMT labeled. A mixture was created with 
 relative volumes of 25 to 20 to 15 to 10 to 5 to 2.5. The mixture was run on a Thermo Fusion using the synchronous precursor scan 
