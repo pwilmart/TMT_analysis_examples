@@ -1,4 +1,5 @@
 ## Comparison between MaxQuant and PAW pipelines. Also comparison between edgeR statistical testing and basic two-sample t-test.
+**Click on the Jupyter notebook file (_KUR1502_MQ_PAW.ipynb_) to see the notebook in your browser. It may take a minute for the page to render and load, so please be patient.**
 
 ## Data from this publication:
 > Huan, J., Hornick, N.I., Goloviznina, N.A., Kamimae-Lanning, A.N., David, L.L., Wilmarth, P.A., Mori, T., Chevillet, J.R., Narla, A., Roberts Jr, C.T. and Loriaux, M.M., 2015. 
