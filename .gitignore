@@ -1,3 +1,25 @@
+
+# Created by https://www.gitignore.io/api/r,microsoftoffice
+
+### MicrosoftOffice ###
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
+
+### R ###
 # History files
 .Rhistory
 .Rapp.history
@@ -31,4 +53,7 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
-.Rproj.user
+
+
+# End of https://www.gitignore.io/api/r,microsoftoffice
+
