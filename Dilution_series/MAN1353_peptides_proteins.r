@@ -59,18 +59,36 @@ psms$ref <- rowMeans(psms)
 peptides$ref <- rowMeans(peptides)
 proteins$ref <- rowMeans(proteins)
 
-# in case we want to plot log values
-log_psms <- log10(psms)
-log_peptides <- log10(peptides)
-log_proteins <- log10(proteins)
-
 # we can simplify plotting if we put data in long form (tidy data)
 gpsms <- gather(psms, key = dilution, value = intensity, a_25:f_2.5)
 gpeptides <- gather(peptides, key = dilution, value = intensity, a_25:f_2.5)
 gproteins <- gather(proteins, key = dilution, value = intensity, a_25:f_2.5)
 
+# check some things
 head(gproteins)
 
+# make frames for MA style plots
+log_psms <- log2(psms[1:6] / psms$ref)
+log_psms$ref <- log10(psms$ref)
+log_peptides <- log2(peptides[1:6] / peptides$ref)
+log_peptides$ref <- log10(peptides$ref)
+log_proteins <- log2(proteins[1:6] / proteins$ref)
+log_proteins$ref <- log10(proteins$ref)
+
+# also tidy the log data frames
+glog_psms <- gather(log_psms, key = dilution, value = log_ratios, a_25:f_2.5)
+glog_peptides <- gather(log_peptides, key = dilution, value = log_ratios, a_25:f_2.5)
+glog_proteins <- gather(log_proteins, key = dilution, value = log_ratios, a_25:f_2.5)
+
+# compute the ratios of each dilution channel to the reference
+# save as log values for horizontal lines in the MA plots
+calc_ratios <- colMeans(psms)
+calc_ratios <- log2(calc_ratios[1:6] / calc_ratios[7])
+
+# check some things
+round(calc_ratios, 2)
+
+# full scale, linear axes
 ggplot(data = gpsms, aes(x = ref, y = intensity)) +
   geom_point(aes(color = dilution, shape = dilution)) +
   geom_smooth(aes(color = dilution), method = "lm") +
@@ -106,6 +124,24 @@ ggplot(data = gproteins, aes(x = ref, y = intensity)) +
   geom_smooth(aes(color = dilution), method = "lm") +
   xlim(c(0, 1000000)) + ylim(c(0, 1000000)) +
   ggtitle("Proteins (expanded scale)")
+
+# MA style plot for PSMs
+ggplot(data = glog_psms, aes(x = ref, y = log_ratios)) +
+  geom_point(aes(color = dilution, shape = dilution)) +
+  geom_hline(yintercept = calc_ratios) +
+  xlab("log ref intensity") + ggtitle("raw PSMs (MA plot)")
+
+# MA style plot for peptides
+ggplot(data = glog_peptides, aes(x = ref, y = log_ratios)) +
+  geom_point(aes(color = dilution, shape = dilution)) +
+  geom_hline(yintercept = calc_ratios) +
+  xlab("log ref intensity") + ggtitle("Peptides (MA plot)")
+
+# MA style plot for proteins
+ggplot(data = glog_proteins, aes(x = ref, y = log_ratios)) +
+  geom_point(aes(color = dilution, shape = dilution)) +
+  geom_hline(yintercept = calc_ratios) +
+  xlab("log ref intensity") + ggtitle("Proteins (MA plot)")
 
 # load edgeR and then put data into DGEList objects
 library(edgeR)
