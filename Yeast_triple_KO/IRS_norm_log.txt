@@ -1,0 +1,166 @@
+Python 3.6.6 |Anaconda custom (64-bit)| (default, Jun 28 2018, 11:07:29) 
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+======= RESTART: /Users/pwilmart/Box Sync/Github_misc/TMT_analysis_examples/Yeast_triple_KO/pandas_TMT_IRS_norm_first9.py =======
+=================================================================
+ pandas_TMT_IRS_norm.py, v1.0.1, written by Phil Wilmarth 2017-8 
+=================================================================
+select a protein results file with TMT intensities and sample key:
+processing: labeled_Fusion_PAW_grouped_protein_summary_TMT_8.txt
+proteins in results file: 778
+total number of non-contaminant proteins: 771
+contamaminant and decoy count: 7
+..394 proteins were not quantifiable in m06677
+..395 proteins were not quantifiable in m06679
+..412 proteins were not quantifiable in m06681
+..proteins with no intensities experiment-wide: 329
+
+m06677 SL Norm Factors:
+  TotInt_126C_m06677: 1.084064
+  TotInt_127N_m06677: 1.115132
+  TotInt_127C_m06677: 1.044255
+  TotInt_128N_m06677: 0.904809
+  TotInt_128C_m06677: 0.976333
+  TotInt_129N_m06677: 0.934427
+  TotInt_129C_m06677: 1.006083
+  TotInt_130N_m06677: 1.059125
+  TotInt_130C_m06677: 1.025942
+  TotInt_131N_m06677: 1.012454
+  TotInt_131C_m06677: 1.012454
+m06679 SL Norm Factors:
+  TotInt_126C_m06679: 1.034109
+  TotInt_127N_m06679: 1.057731
+  TotInt_127C_m06679: 0.986797
+  TotInt_128N_m06679: 0.850191
+  TotInt_128C_m06679: 0.916422
+  TotInt_129N_m06679: 0.876464
+  TotInt_129C_m06679: 0.953432
+  TotInt_130N_m06679: 0.995697
+  TotInt_130C_m06679: 0.966751
+  TotInt_131N_m06679: 0.955239
+  TotInt_131C_m06679: 0.955239
+m06681 SL Norm Factors:
+  TotInt_126C_m06681: 1.129548
+  TotInt_127N_m06681: 1.149165
+  TotInt_127C_m06681: 1.073065
+  TotInt_128N_m06681: 0.920988
+  TotInt_128C_m06681: 0.986165
+  TotInt_129N_m06681: 0.942264
+  TotInt_129C_m06681: 1.030455
+  TotInt_130N_m06681: 1.086157
+  TotInt_130C_m06681: 1.053355
+  TotInt_131N_m06681: 1.035795
+  TotInt_131C_m06681: 1.035795
+
+number of non-contaminant/decoy proteins: 771
+number of proteins with full intensity sets: 307
+>>> 
+======= RESTART: /Users/pwilmart/Box Sync/Github_misc/TMT_analysis_examples/Yeast_triple_KO/pandas_TMT_IRS_norm_first9.py =======
+=================================================================
+ pandas_TMT_IRS_norm.py, v1.0.1, written by Phil Wilmarth 2017-8 
+=================================================================
+select a protein results file with TMT intensities and sample key:
+processing: labeled_Lumos_PAW_grouped_protein_summary_TMT_8.txt
+proteins in results file: 778
+total number of non-contaminant proteins: 771
+contamaminant and decoy count: 7
+..264 proteins were not quantifiable in L00760
+..275 proteins were not quantifiable in L00762
+..281 proteins were not quantifiable in L00764
+..proteins with no intensities experiment-wide: 202
+
+L00760 SL Norm Factors:
+  TotInt_126C_L00760: 1.036926
+  TotInt_127N_L00760: 1.057582
+  TotInt_127C_L00760: 1.005425
+  TotInt_128N_L00760: 0.857497
+  TotInt_128C_L00760: 0.948323
+  TotInt_129N_L00760: 0.908336
+  TotInt_129C_L00760: 0.990443
+  TotInt_130N_L00760: 1.039194
+  TotInt_130C_L00760: 1.017360
+  TotInt_131N_L00760: 0.980284
+  TotInt_131C_L00760: 0.980284
+L00762 SL Norm Factors:
+  TotInt_126C_L00762: 1.064280
+  TotInt_127N_L00762: 1.082499
+  TotInt_127C_L00762: 1.029124
+  TotInt_128N_L00762: 0.885682
+  TotInt_128C_L00762: 0.981026
+  TotInt_129N_L00762: 0.937235
+  TotInt_129C_L00762: 1.012263
+  TotInt_130N_L00762: 1.060203
+  TotInt_130C_L00762: 1.041779
+  TotInt_131N_L00762: 1.006546
+  TotInt_131C_L00762: 1.006546
+L00764 SL Norm Factors:
+  TotInt_126C_L00764: 1.070271
+  TotInt_127N_L00764: 1.088074
+  TotInt_127C_L00764: 1.034911
+  TotInt_128N_L00764: 0.892739
+  TotInt_128C_L00764: 0.989770
+  TotInt_129N_L00764: 0.944557
+  TotInt_129C_L00764: 1.021929
+  TotInt_130N_L00764: 1.067948
+  TotInt_130C_L00764: 1.048488
+  TotInt_131N_L00764: 1.013797
+  TotInt_131C_L00764: 1.013797
+
+number of non-contaminant/decoy proteins: 771
+number of proteins with full intensity sets: 431
+>>> 
+======= RESTART: /Users/pwilmart/Box Sync/Github_misc/TMT_analysis_examples/Yeast_triple_KO/pandas_TMT_IRS_norm_first9.py =======
+=================================================================
+ pandas_TMT_IRS_norm.py, v1.0.1, written by Phil Wilmarth 2017-8 
+=================================================================
+select a protein results file with TMT intensities and sample key:
+processing: labeled_MS2_Lumos_PAW_grouped_protein_summary_TMT_8.txt
+proteins in results file: 778
+total number of non-contaminant proteins: 771
+contamaminant and decoy count: 7
+..26 proteins were not quantifiable in L00761
+..38 proteins were not quantifiable in L00763
+..26 proteins were not quantifiable in L00765
+..proteins with no intensities experiment-wide: 2
+
+L00761 SL Norm Factors:
+  TotInt_126C_L00761: 1.002259
+  TotInt_127N_L00761: 1.062642
+  TotInt_127C_L00761: 1.000163
+  TotInt_128N_L00761: 0.899148
+  TotInt_128C_L00761: 1.000349
+  TotInt_129N_L00761: 0.949667
+  TotInt_129C_L00761: 0.996803
+  TotInt_130N_L00761: 1.032619
+  TotInt_130C_L00761: 1.006489
+  TotInt_131N_L00761: 0.992433
+  TotInt_131C_L00761: 0.992433
+L00763 SL Norm Factors:
+  TotInt_126C_L00763: 1.046768
+  TotInt_127N_L00763: 1.072439
+  TotInt_127C_L00763: 1.008933
+  TotInt_128N_L00763: 0.896627
+  TotInt_128C_L00763: 0.997891
+  TotInt_129N_L00763: 0.944699
+  TotInt_129C_L00763: 1.001396
+  TotInt_130N_L00763: 1.039628
+  TotInt_130C_L00763: 1.009821
+  TotInt_131N_L00763: 0.999375
+  TotInt_131C_L00763: 0.999375
+L00765 SL Norm Factors:
+  TotInt_126C_L00765: 1.060893
+  TotInt_127N_L00765: 1.079050
+  TotInt_127C_L00765: 1.017172
+  TotInt_128N_L00765: 0.904237
+  TotInt_128C_L00765: 1.005627
+  TotInt_129N_L00765: 0.954085
+  TotInt_129C_L00765: 1.011119
+  TotInt_130N_L00765: 1.047231
+  TotInt_130C_L00765: 1.019419
+  TotInt_131N_L00765: 1.008319
+  TotInt_131C_L00765: 1.008319
+
+number of non-contaminant/decoy proteins: 771
+number of proteins with full intensity sets: 700
+>>> 
