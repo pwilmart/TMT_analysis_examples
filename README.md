@@ -19,7 +19,7 @@
 > **[JPR-201712_MS2-MS3_PSM-peptide-protein](https://pwilmart.github.io/TMT_analysis_examples/MS2MS3_peptides_proteins.html)**: Explores TMT data aggregation at PSM, peptide, and protein levels for the same 10 replicates of an E. coli digest. Also compares MS2-based reporter ions to MS3-based reporter ions. Analysis was done with MaxQuant.
 
 ### [Gygi Lab Yeast triple knockout](https://github.com/pwilmart/Yeast_triple_KO_TMT)
-**[HTML file](https://pwilmart.github.io/TMT_analysis_examples/Triple_KO.html)**
+####[HTML file](https://pwilmart.github.io/TMT_analysis_examples/Triple_KO.html)
 
 Re-analysis of yeast triple knockout TMT data from the Gygi lab.
 
