@@ -1,5 +1,5 @@
 # TMT_analysis_examples
-## Examples of TMT data analyses using R 
+## Examples of TMT data analyses using R
 #### Phillip Wilmarth
 #### Oregon Health & Science Universtiy
 #### Proteomic Shared Resource
@@ -18,4 +18,8 @@
 
 > **[JPR-201712_MS2-MS3_PSM-peptide-protein](https://pwilmart.github.io/TMT_analysis_examples/MS2MS3_peptides_proteins.html)**: Explores TMT data aggregation at PSM, peptide, and protein levels for the same 10 replicates of an E. coli digest. Also compares MS2-based reporter ions to MS3-based reporter ions. Analysis was done with MaxQuant.
 
-> **[Gygi Lab Yeast triple knockout](https://pwilmart.github.io/TMT_analysis_examples/Triple_KO.html)**: Re-analysis of yeast triple knockout TMT data from the Gygi lab {Paulo, J.A., O’Connell, J.D. and Gygi, S.P., 2016. A triple knockout (TKO) proteomics standard for diagnosing ion interference in isobaric labeling experiments. Journal of the American Society for Mass Spectrometry, 27(10), pp.1620-1625.}.
+### Gygi Lab Yeast triple knockout
+**[HTML file](https://pwilmart.github.io/TMT_analysis_examples/Triple_KO.html)**
+**[repository](https://github.com/pwilmart/Yeast_triple_KO_TMT)**
+
+Re-analysis of yeast triple knockout TMT data from the Gygi lab {Paulo, J.A., O’Connell, J.D. and Gygi, S.P., 2016. A triple knockout (TKO) proteomics standard for diagnosing ion interference in isobaric labeling experiments. Journal of the American Society for Mass Spectrometry, 27(10), pp.1620-1625.}.
