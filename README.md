@@ -11,14 +11,24 @@
 ## Folders and descriptions:
 ### ([Jupyter notebooks](http://jupyter.org) are now viewable via the links below)
 
-> **[MaxQuant_and_PAW](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_MQ_PAW.html)**: Comparison of 3 control versus 4 treatment mouse cell culture data. The data are SPS MS3 on a Thermo Fusion using TMT 10-plex. Data were analyzed with two pipelines: MaxQuant (v1.5.7.4) and an OHSU in-house pipeline (PAW). Anaysis started with protein reports from both (files are in the repository). Details are provided for prepping the data for analysis with R. R analysis script and Jupyter notebook used for analysis.
+### (1) [MaxQuant_and_PAW](https://github.com/pwilmart/MaxQuant_and_PAW.git)
+#### [HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_MQ_PAW.html)
+
+Comparison of 3 control versus 4 treatment mouse cell culture data. The data are SPS MS3 on a Thermo Fusion using TMT 10-plex. Data were analyzed with two pipelines: MaxQuant (v1.5.7.4) and an OHSU in-house pipeline (PAW). Anaysis started with protein reports from both (files are in the repository). Details are provided for prepping the data for analysis with R. R analysis script and Jupyter notebook used for analysis.
+
+> Huan, J., Hornick, N.I., Goloviznina, N.A., Kamimae-Lanning, A.N., David, L.L., Wilmarth, P.A., Mori, T., Chevillet, J.R., Narla, A., Roberts Jr, C.T. and Loriaux, M.M., 2015. Coordinate regulation of residual bone marrow function by paracrine trafficking of AML exosomes. Leukemia, 29(12), p.2285.
 
 ### (2) [Dilution_series](https://github.com/pwilmart/Dilution_series)
 #### [HTML file](https://pwilmart.github.io/TMT_analysis_examples/MAN1353_peptides_proteins.html)
 
 Analysis of a dilution series to compare the properties of reporter ions at the PSM, the peptide, and the protein levels. This looks at the advantages of aggregating TMT reporter ions into protein intensities.
 
-> **[Multiple_TMT_MQ](https://pwilmart.github.io/TMT_analysis_examples/multiple_TMT_MQ.html)**: Analysis of the mouse lens development data with MaxQuant. This is a three TMT experiment, and how to match the data between TMT experiments is demonstrated. This focuses on normalization methods. Statsitical testing is not explored since that was done in the other repository referenced above.
+### (3) [Multiple_TMT_MQ](https://github.com/pwilmart/Multiple_TMT_MQ.git)
+#### [HTML file](https://pwilmart.github.io/TMT_analysis_examples/multiple_TMT_MQ.html)
+
+Analysis of the mouse lens development data with MaxQuant. This is a three TMT experiment, and how to match the data between TMT experiments is demonstrated. This focuses on normalization methods. Statsitical testing is not explored since that was done in the other repository referenced above.
+
+> Khan, S.Y., Ali, M., Kabir, F., Renuse, S., Na, C.H., Talbot, C.C., Hackett, S.F. and Riazuddin, S.A., 2018. Proteome Profiling of Developing Murine Lens Through Mass Spectrometry. Investigative Ophthalmology & Visual Science, 59(1), pp.100-107.
 
  ### (4) [JPR-201712_MS2-MS3_PSM-peptide-protein](https://github.com/pwilmart/JPR-201712_MS2-MS3_PSM-peptide-protein)
  #### [HTML file](https://pwilmart.github.io/TMT_analysis_examples/MS2MS3_peptides_proteins.html)
