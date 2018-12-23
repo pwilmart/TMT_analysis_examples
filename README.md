@@ -1,7 +1,7 @@
 # TMT_analysis_examples
 ## Examples of TMT data analyses using R
 #### Phillip Wilmarth
-#### Oregon Health & Science Universtiy
+#### Oregon Health & Science University
 #### Proteomic Shared Resource
 #### Winter/Spring 2018
 
