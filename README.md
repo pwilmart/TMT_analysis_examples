@@ -43,3 +43,10 @@ Analysis of the mouse lens development data with MaxQuant. This is a three TMT e
 Re-analysis of yeast triple knockout TMT data from the Gygi lab.
 
 > Paulo, J.A., O’Connell, J.D. and Gygi, S.P., 2016. A triple knockout (TKO) proteomics standard for diagnosing ion interference in isobaric labeling experiments. Journal of the American Society for Mass Spectrometry, 27(10), pp.1620-1625.
+
+### (6) [Plubell_2017_PAW](https://github.com/pwilmart/Plubell_2017_PAW.git)
+#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/auto_finder_PAW.html)
+
+Re-analysis of the data in the original IRS paper using PAW/Comet, and other workflows. The original experiment was four 10-plex TMT labelings with the two internal reference pooled standards randomly assigned different channels in each plex. The first notebook explores how to make sure that those two channels in each plex are correctly determined before doing the IRS normalization.
+
+> Plubell, D.L., Wilmarth, P.A., Zhao, Y., Fenton, A.M., Minnier, J., Reddy, A.P., Klimek, J., Yang, X., David, L.L. and Pamir, N., 2017. Extended multiplexing of tandem mass tags (TMT) labeling reveals age and high fat diet specific proteome changes in mouse epididymal adipose tissue. Molecular & Cellular Proteomics, 16(5), pp.873-890.
