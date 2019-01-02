@@ -21,7 +21,7 @@ Comparison of 3 control versus 4 treatment mouse cell culture data. The data are
 ### (2) [Dilution_series](https://github.com/pwilmart/Dilution_series)
 #### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MAN1353_peptides_proteins.html)
 
-Analysis of a dilution series to compare the properties of reporter ions at the PSM, the peptide, and the protein levels. This looks at the advantages of aggregating TMT reporter ions into protein intensities.
+**Updated January 1, 2019.** Analysis of a dilution series to compare the properties of reporter ions at the PSM, the peptide, and the protein levels. This looks at the advantages of aggregating TMT reporter ions into protein intensities. It also explores data normalization in edgeR with TMM. Updated with better R scripting and more use of ggplot.
 
 ### (3) [Multiple_TMT_MQ](https://github.com/pwilmart/Multiple_TMT_MQ.git)
 #### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/multiple_TMT_MQ.html)
