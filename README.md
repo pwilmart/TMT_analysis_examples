@@ -1,9 +1,9 @@
 # TMT_analysis_examples
-## Examples of TMT data analyses using R
+## Examples of TMT data analyses using Jupyter notebooks and R
 #### Phillip Wilmarth
 #### Oregon Health & Science University
 #### Proteomic Shared Resource
-#### Winter/Spring 2018
+#### 2018, 2019
 
 ## Other repositories that may be helpful:
 * [Multi-TMT experiments and IRS normalization](https://github.com/pwilmart/IRS_normalization.git)
