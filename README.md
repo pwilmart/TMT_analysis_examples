@@ -50,3 +50,9 @@ Re-analysis of yeast triple knockout TMT data from the Gygi lab.
 Re-analysis of the data in the original IRS paper using PAW/Comet, and other workflows. The original experiment was four 10-plex TMT labelings with the two internal reference pooled standards randomly assigned different channels in each plex. The first notebook explores how to make sure that those two channels in each plex are correctly determined before doing the IRS normalization.
 
 > Plubell, D.L., Wilmarth, P.A., Zhao, Y., Fenton, A.M., Minnier, J., Reddy, A.P., Klimek, J., Yang, X., David, L.L. and Pamir, N., 2017. Extended multiplexing of tandem mass tags (TMT) labeling reveals age and high fat diet specific proteome changes in mouse epididymal adipose tissue. Molecular & Cellular Proteomics, 16(5), pp.873-890.
+
+### (7) [IRS_validation](https://github.com/pwilmart/IRS_validation.git)
+#### [auto_finder HTML file](https://pwilmart.github.io/TMT_analysis_examples/auto_finder_BIND-473.html)
+#### [IRS_validation HTML file](https://pwilmart.github.io/TMT_analysis_examples/IRS_validation.html)
+
+Thorough testing and validation of the IRS method using reference channel data from a 77-channel TMT experiment.
