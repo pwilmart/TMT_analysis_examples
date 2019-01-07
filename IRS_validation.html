@@ -47822,7 +47822,7 @@ irs_factors<span class="o">$</span>fac6 <span class="o">&lt;-</span> irs_factors
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># make new data frame with normalized data</span>
@@ -50096,7 +50096,7 @@ CiiggAIKKKCAAgoooIACCiiggAIKKKCAAgrMlsD/B9PUhubYTFNEAAAAAElFTkSuQmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># make big scatter plots</span>
@@ -51708,7 +51708,7 @@ QmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># make scatter plots across all 3 plexes</span>
@@ -54393,7 +54393,7 @@ rkJggg=="
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="IRS-does-just-one-thing-and-it-does-it-well">IRS does just one thing and it does it well<a class="anchor-link" href="#IRS-does-just-one-thing-and-it-does-it-well">&#182;</a></h2><p>The IRS method does just one thing - it removes MS2 sampling variation. Even though we took duplicate measures of the reference channel in each plex, the average of those measures still has some uncertainty. The uncertainties in the protein rulers in each plex do propagate into the final IRS-adjusted values. That is just the cost of admission in large isobaric labeling experiments. IRS may not be perfect, but there is really <strong>no alternative</strong>.</p>
+<h2 id="IRS-does-just-one-thing-and-does-it-well">IRS does just one thing and does it well<a class="anchor-link" href="#IRS-does-just-one-thing-and-does-it-well">&#182;</a></h2><p>The IRS method does just one thing - it removes MS2 sampling variation. Even though we took duplicate measures of the reference channel in each plex, the average of those measures still has some uncertainty. The uncertainties in the protein rulers in each plex do propagate into the final IRS-adjusted values. That is just the cost of admission in large isobaric labeling experiments. IRS may not be perfect, but there is really <strong>no alternative</strong>.</p>
 <p>Is the data without IRS completely worthless? That is an interesting question. The BUB (big, ugly blobs) scatter plots still had 0.91 for correlation coefficients, which is a pretty large positive correlation. The BUB appearance and CV values indicate that there is a lot of variance in the data without IRS.</p>
 <p>We know that these samples are the same, so we can take intensity ratios and look at the distributions of the log2 R values. Those will be bell shaped and their widths near the bases of the distributions will tell us what kind of ballpark fold-changes might be statistically significant when we compare biological samples. We will need to have bigger differences between biological replicates than we have between technical replicates to actually be able to measure anything.</p>
 
@@ -54402,7 +54402,7 @@ rkJggg=="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># form some log2 ratio vectors and pack into a data frame for TMM norm data</span>
@@ -56459,23 +56459,27 @@ AgQIECBAgAABAg8CA25fBxs5FV//AAAAAElFTkSuQmCC"
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Log-ratios-greater-than-about-2-(4-fold)-would-be-needed-for-non-IRS-data">Log ratios greater than about 2 (4-fold) would be needed for non-IRS data<a class="anchor-link" href="#Log-ratios-greater-than-about-2-(4-fold)-would-be-needed-for-non-IRS-data">&#182;</a></h3><p>We picked TMM normalized data. The distribution of log2 ratios is getting near the baseline at values greater than 2 or less than -2. That is in the ballpark of 4-fold changes or larger before we might be able to detect any differential expression.</p>
+<p>Make same plots after IRS.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>log2R_irs <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>log2R <span class="o">=</span> <span class="kp">log2</span><span class="p">(</span>pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="o">/</span> pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">4</span><span class="p">])),</span> exp <span class="o">=</span> <span class="s">&quot;Exp2.4&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># make a log2 ratio data frame</span>
+log2R_irs <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>log2R <span class="o">=</span> <span class="kp">log2</span><span class="p">(</span>pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="o">/</span> pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">4</span><span class="p">])),</span> exp <span class="o">=</span> <span class="s">&quot;Exp2.4&quot;</span><span class="p">)</span>
 log2R_irs <span class="o">&lt;-</span> <span class="kp">rbind</span><span class="p">(</span>log2R_irs<span class="p">,</span> <span class="kt">data.frame</span><span class="p">(</span>log2R <span class="o">=</span> <span class="kp">log2</span><span class="p">(</span>pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">1</span><span class="p">])</span> <span class="o">/</span> pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">7</span><span class="p">])),</span> exp <span class="o">=</span> <span class="s">&quot;Exp2.6&quot;</span><span class="p">))</span>
 log2R_irs <span class="o">&lt;-</span> <span class="kp">rbind</span><span class="p">(</span>log2R_irs<span class="p">,</span> <span class="kt">data.frame</span><span class="p">(</span>log2R <span class="o">=</span> <span class="kp">log2</span><span class="p">(</span>pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">4</span><span class="p">])</span> <span class="o">/</span> pull<span class="p">(</span>all_irs<span class="p">[</span><span class="m">7</span><span class="p">])),</span> exp <span class="o">=</span> <span class="s">&quot;Exp4.6&quot;</span><span class="p">))</span>
 
+<span class="c1"># some base parts of plot</span>
 hplot <span class="o">&lt;-</span> ggplot<span class="p">(</span>log2R_irs<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> log2R<span class="p">,</span> color <span class="o">=</span> <span class="kp">exp</span><span class="p">,</span> fill <span class="o">=</span> <span class="kp">exp</span><span class="p">))</span> <span class="o">+</span>
   coord_cartesian<span class="p">(</span>xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span> <span class="o">+</span>
   ggtitle<span class="p">(</span><span class="s">&quot;log2R distributions: Extra Channels - IRS&quot;</span><span class="p">)</span>
 
+<span class="c1"># set a few more parameters and show plots</span>
 hplot <span class="o">+</span> geom_histogram<span class="p">(</span>binwidth<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> alpha <span class="o">=</span> <span class="m">0.4</span><span class="p">,</span> position <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span>
 hplot <span class="o">+</span> geom_histogram<span class="p">(</span>binwidth<span class="o">=</span><span class="m">0.1</span><span class="p">,</span> alpha <span class="o">=</span> <span class="m">0.4</span><span class="p">,</span> position <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span><span class="kp">exp</span><span class="p">)</span>
 </pre></div>
@@ -58362,10 +58366,11 @@ iZUQQAABBBBAAAEEEEDADwL/P+6JdaS6zPeuAAAAAElFTkSuQmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>ggplot<span class="p">(</span>log2R_irs<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> log2R<span class="p">,</span> color <span class="o">=</span> <span class="kp">exp</span><span class="p">,</span> fill <span class="o">=</span> <span class="kp">exp</span><span class="p">))</span> <span class="o">+</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># expand the x-axis more</span>
+ggplot<span class="p">(</span>log2R_irs<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> log2R<span class="p">,</span> color <span class="o">=</span> <span class="kp">exp</span><span class="p">,</span> fill <span class="o">=</span> <span class="kp">exp</span><span class="p">))</span> <span class="o">+</span>
   coord_cartesian<span class="p">(</span>xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span>
   geom_histogram<span class="p">(</span>binwidth<span class="o">=</span><span class="m">0.05</span><span class="p">,</span> alpha <span class="o">=</span> <span class="m">0.4</span><span class="p">,</span> position <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span>
   ggtitle<span class="p">(</span><span class="s">&quot;log2R distributions: Extra Channels - IRS&quot;</span><span class="p">)</span>
@@ -59334,7 +59339,7 @@ YII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># log session</span>
