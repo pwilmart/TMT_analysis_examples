@@ -58,7 +58,7 @@ Re-analysis of the data in the original IRS paper using PAW/Comet, and other wor
 Thorough testing and validation of the IRS method using reference channel data from a 77-channel TMT experiment.
 
 ### (8) [Yeast_CarbonSources](https://github.com/pwilmart/Yeast_CarbonSources.git)
-#### [CarbonSources_part-1 HTML file](https://pwilmart.github.io/TMT_analysis_examples/CarbonSources_part1.html)
+#### [CarbonSources_part-1 HTML file](https://pwilmart.github.io/TMT_analysis_examples/CarbonSources_part-1.html)
 
 This is analysis of a public dataset ([PRIDE PXD002875](https://www.ebi.ac.uk/pride/archive/projects/PXD002875)) from Paulo, O'Connell, Gaun, and Gygi processed with the PAW pipeline using Comet. The part-1 notebook covers basic TMT data sanity checks, normalization, and basic statistical testing with edgeR. Part-2 will explore how much the numbers of differential candidates can vary with statistical test choices.
 
