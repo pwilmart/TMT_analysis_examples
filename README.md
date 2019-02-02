@@ -59,7 +59,10 @@ Thorough testing and validation of the IRS method using reference channel data f
 
 ### (8) [Yeast_CarbonSources](https://github.com/pwilmart/Yeast_CarbonSources.git)
 #### [CarbonSources_part-1 HTML file](https://pwilmart.github.io/TMT_analysis_examples/CarbonSources_part-1.html)
+#### [CarbonSources_MQ HTML file](https://pwilmart.github.io/TMT_analysis_examples/CarbonSources_MQ.html)
 
 This is analysis of a public dataset ([PRIDE PXD002875](https://www.ebi.ac.uk/pride/archive/projects/PXD002875)) from Paulo, O'Connell, Gaun, and Gygi processed with the PAW pipeline using Comet. The part-1 notebook covers basic TMT data sanity checks, normalization, and basic statistical testing with edgeR. Part-2 will explore how much the numbers of differential candidates can vary with statistical test choices.
+
+I added a MaxQuant 1.6.3.3 processing of the same RAW files worked up using a very similar notebook.
 
 > Paulo, J.A., O’Connell, J.D., Gaun, A. and Gygi, S.P., 2015. Proteome-wide quantitative multiplexed profiling of protein expression: carbon-source dependency in Saccharomyces cerevisiae. Molecular biology of the cell, 26(22), pp.4063-4074.
