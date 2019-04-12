@@ -69,3 +69,13 @@ This is analysis of a public dataset ([PRIDE PXD002875](https://www.ebi.ac.uk/pr
 I added a MaxQuant 1.6.3.3 processing of the same RAW files worked up using a very similar notebook.
 
 > Paulo, J.A., O’Connell, J.D., Gaun, A. and Gygi, S.P., 2015. Proteome-wide quantitative multiplexed profiling of protein expression: carbon-source dependency in Saccharomyces cerevisiae. Molecular biology of the cell, 26(22), pp.4063-4074.
+
+### (9) [BCP-ALL_QE-TMT_Nat-Comm-2019 repository](https://github.com/pwilmart/BCP-ALL_QE-TMT_Nat-Comm-2019.git)
+#### HTML files:
+##### [balanced study averages](https://pwilmart.github.io/TMT_analysis_examples/Nat-Comm-2019_TMT_QE_averages.html) - slightly better IRS using plex averages
+
+##### [single pooled standard](https://pwilmart.github.io/TMT_analysis_examples/Nat-Comm-2019_TMT_QE_pools.html) - single pooled internal standards have a little more uncertainty
+
+Re-analysis of data from childhood acute lymphoblastic leukemia study in Nat. Comm. April 2019. Demonstrates an independent analysis of the 216 Q-Exactive RAW files where MS2 reporter ions are kept in their natural intensity scale instead of ratio transformations. Natural intensity scales are more informative than ratios and have more options for statistical testing. Data from the publication below.
+
+> Yang, M., Vesterlund, M., Siavelis, I., Moura-Castro, L.H., Castor, A., Fioretos, T., Jafari, R., Lilljebjörn, H., Odom, D.T., Olsson, L. and Ravi, N., 2019. Proteogenomics and Hi-C reveal transcriptional dysregulation in high hyperdiploid childhood acute lymphoblastic leukemia. Nature communications, 10(1), p.1519.
