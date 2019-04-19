@@ -33,7 +33,7 @@ Analysis of the mouse lens development data with MaxQuant. This is a three TMT e
 
 > Khan, S.Y., Ali, M., Kabir, F., Renuse, S., Na, C.H., Talbot, C.C., Hackett, S.F. and Riazuddin, S.A., 2018. Proteome Profiling of Developing Murine Lens Through Mass Spectrometry. Investigative Ophthalmology & Visual Science, 59(1), pp.100-107.
 
-### (4) [JPR-201712_MS2-MS3_PSM-peptide-protein repository](https://github.com/pwilmart/JPR-201712_MS2-MS3_PSM-peptide-protein)
+### (4) [JPR-201712_MS2-MS3 repository](https://github.com/pwilmart/JPR-201712_MS2-MS3)
 #### [First analysis HTML file](https://pwilmart.github.io/TMT_analysis_examples/MS2MS3_peptides_proteins.html)
 
 Looks at PSM, peptide, and protein level data. Analysis preformed with MaxQuant (v1.5.7.4).
