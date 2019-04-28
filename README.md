@@ -42,6 +42,10 @@ Looks at PSM, peptide, and protein level data. Analysis preformed with MaxQuant 
 
 Compares MS2 reporter ion data to SPS MS3 reporter ion data. Analysis done with PAW pipeline.
 
+#### [serum analysis HTML file](https://pwilmart.github.io/TMT_analysis_examples/JPR-2017_serum.html)
+
+Analysis of depleted serum labeled with 10-plex TMT and processed on Q-Exactive. Analysis done with PAW pipeline.
+
 Data is from this publication:
 
 > D’Angelo, G., Chaerkady, R., Yu, W., Hizal, D.B., Hess, S., Zhao, W., Lekstrom, K., Guo, X., White, W.I., Roskos, L. and Bowen, M.A., 2017. Statistical models for the analysis of isobaric tags multiplexed quantitative proteomics. Journal of proteome research, 16(9), pp.3124-3136.
