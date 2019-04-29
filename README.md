@@ -12,12 +12,16 @@
 
 ### (1) [MaxQuant_and_PAW repository](https://github.com/pwilmart/MaxQuant_and_PAW.git)
 #### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW.html)
+#### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_t-test.html)
+#### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_limma.html)
 #### [MQ analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_MQ.html)
 ##### [older Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW.html)
 
 Comparisons of 3 control versus 4 treatment mouse cell culture data. The data are from SPS MS3 acquisition on a Thermo Fusion using TMT 10-plex. Data were analyzed with two pipelines: MaxQuant (v1.6.5.0) and an OHSU in-house pipeline (Comet/PAW). Each pipeline was analyzed separately in similar notebook layouts. Both notebooks can be opened side-by-side for an easy head-to-head comparison.
 
-There is also a comparison of the edgeR statistical testing to a two-sample t-test to clearly demonstrate the improved performance of newer statistical tools. Analyses started with protein reports from each pipeline (files are in the repository folders). R analysis scripts and Jupyter notebooks were used for analyses. The data is from the publication below.
+There is also a comparison of the edgeR statistical testing to a two-sample t-test and to limma to clearly demonstrate the improved performance of newer statistical tools.
+
+Analyses started with protein reports from each pipeline (files are in the repository folders). R analysis scripts and Jupyter notebooks were used for analyses. The data is from the publication below.
 
 > Huan, J., Hornick, N.I., Goloviznina, N.A., Kamimae-Lanning, A.N., David, L.L., Wilmarth, P.A., Mori, T., Chevillet, J.R., Narla, A., Roberts Jr, C.T. and Loriaux, M.M., 2015. Coordinate regulation of residual bone marrow function by paracrine trafficking of AML exosomes. Leukemia, 29(12), p.2285.
 
