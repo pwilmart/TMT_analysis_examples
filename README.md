@@ -12,8 +12,8 @@
 
 ### (1) [MaxQuant_and_PAW repository](https://github.com/pwilmart/MaxQuant_and_PAW.git)
 #### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW.html)
-#### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_t-test.html)
-#### [PAW analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_limma.html)
+#### [Compare to t-test Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_t-test.html)
+#### [Compare to limma Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW_limma.html)
 #### [MQ analysis Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_MQ.html)
 ##### [older Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/KUR1502_PAW.html)
 
