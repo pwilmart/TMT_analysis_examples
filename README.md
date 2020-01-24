@@ -102,13 +102,13 @@ Re-analysis of data from childhood acute lymphoblastic leukemia study in Nat. Co
 
 ### (10) [SPS-MS3_vs_MS2 repository](https://github.com/pwilmart/SPS-MS3_vs_MS2_TMT.git)
 #### HTML files:
-#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_combined.html) - combined TMT data from both Fusion and Q-Exactive HF platforms
+#### [Combined notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_combined.html) - combined TMT data from both Fusion and Q-Exactive HF platforms
 
-#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_Fusion.html) - analysis of TMT data from SPS MS3 acquisition on a Fusion Tribrid
+#### [Fusion notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_Fusion.html) - analysis of TMT data from SPS MS3 acquisition on a Fusion Tribrid
 
-#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_QE.html) - analysis of MS2 TMT data from a Q-Exactive HF instrument
+#### [Q-Exactive notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_QE.html) - analysis of MS2 TMT data from a Q-Exactive HF instrument
 
-The same 10-plex TMT labeled samples were ran on a Thermo Fusion Tribrid Instrument using the SPS MS3 data acquisition method and ran on a Q-Exactive HF using MS2 reporter ions. Each platform's data are analyzed in separate notebooks and in a combined notebook (a more head-to-head workup). Each dataset used two TMT plexes to accommodate the 14 biological samples. [IRS normalization](https://github.com/pwilmart/IRS_normalization) ([also see this](https://github.com/pwilmart/IRS_validation)) was used to combine plexes for each platform. The [PAW pipeline](https://github.com/pwilmart/PAW_pipeline) was flexible enough to apply the IRS method to data from both platforms and allow a combined analysis. _(added 20200123)_ 
+The same 10-plex TMT labeled samples were ran on a Thermo Fusion Tribrid Instrument using the SPS MS3 data acquisition method and ran on a Q-Exactive HF using MS2 reporter ions. Each platform's data are analyzed in separate notebooks and in a combined notebook (a more head-to-head workup). Each dataset used two TMT plexes to accommodate the 14 biological samples. [IRS normalization](https://github.com/pwilmart/IRS_normalization) ([also see this](https://github.com/pwilmart/IRS_validation)) was used to combine plexes for each platform. The [PAW pipeline](https://github.com/pwilmart/PAW_pipeline) was flexible enough to apply the IRS method to data from both platforms and allow a combined analysis. _(added 20200123)_
 
 ---
 ### Spectral counting data:
