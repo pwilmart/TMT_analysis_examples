@@ -100,24 +100,34 @@ Re-analysis of data from childhood acute lymphoblastic leukemia study in Nat. Co
 
 > Yang, M., Vesterlund, M., Siavelis, I., Moura-Castro, L.H., Castor, A., Fioretos, T., Jafari, R., Lilljebjörn, H., Odom, D.T., Olsson, L. and Ravi, N., 2019. Proteogenomics and Hi-C reveal transcriptional dysregulation in high hyperdiploid childhood acute lymphoblastic leukemia. Nature communications, 10(1), p.1519.
 
+### (10) [SPS-MS3_vs_MS2 repository](https://github.com/pwilmart/SPS-MS3_vs_MS2_TMT.git)
+#### HTML files:
+#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_combined.html) - combined TMT data from both Fusion and Q-Exactive HF platforms
+
+#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_Fusion.html) - analysis of TMT data from SPS MS3 acquisition on a Fusion Tribrid
+
+#### [Notebook HTML file](https://pwilmart.github.io/TMT_analysis_examples/MORG-75_QE.html) - analysis of MS2 TMT data from a Q-Exactive HF instrument
+
+The same 10-plex TMT labeled samples were ran on a Thermo Fusion Tribrid Instrument using the SPS MS3 data acquisition method and ran on a Q-Exactive HF using MS2 reporter ions. Each platform's data are analyzed in separate notebooks and in a combined notebook (a more head-to-head workup). Each dataset used two TMT plexes to accommodate the 14 biological samples. [IRS normalization](https://github.com/pwilmart/IRS_normalization) ([also see this](https://github.com/pwilmart/IRS_validation)) was used to combine plexes for each platform. The [PAW pipeline](https://github.com/pwilmart/PAW_pipeline) was flexible enough to apply the IRS method to data from both platforms and allow a combined analysis. _(added 20200123)_ 
+
 ---
 ### Spectral counting data:
 
-### (10) [ABRF_iPRG_2015_SpC repository](https://github.com/pwilmart/ABRF_iPRG_2015_SpC.git)
+### (1) [ABRF_iPRG_2015_SpC repository](https://github.com/pwilmart/ABRF_iPRG_2015_SpC.git)
 #### [ABRF_2015_edgeR notebook file](https://pwilmart.github.io/TMT_analysis_examples/ABRF_2015_edgeR.html)
 
 This is re-analysis of a spectral counting public dataset ([MassIVE MSV000079843](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=eccf4bd3e86a4f79af468b0010eb80b0)). The data is from the ABRF iPRG 2015 study and is described in (Choi-2017). Six proteins were prepared in 4 different abundance mixes and spiked into a yeast cell lysate background. Each of the 4 different spike-in experiments were analyzed in triplicate on a Q-Exactive instrument. Each sample was analyzed using a single LC run.
 
 > Choi, M., Eren-Dogu, Z.F., Colangelo, C., Cottrell, J., Hoopmann, M.R., Kapp, E.A., Kim, S., Lam, H., Neubert, T.A., Palmblad, M. and Phinney, B.S., 2017. ABRF Proteome Informatics Research Group (iPRG) 2015 Study: Detection of Differentially Abundant Proteins in Label-Free Quantitative LC–MS/MS Experiments. Journal of proteome research, 16(2), pp.945-957.
 
-### (11) [Smith_SpC_2018 repository](https://github.com/pwilmart/Smith_SpC_2018.git)
+### (2) [Smith_SpC_2018 repository](https://github.com/pwilmart/Smith_SpC_2018.git)
 #### [Smith_2018_edgeR notebook file](https://pwilmart.github.io/TMT_analysis_examples/Smith_2018_edgeR.html)
 
 This is re-analysis of a large spectral counting public dataset ([PXD005972](https://www.ebi.ac.uk/pride/archive/projects/PXD005972)). The data is from this [recent study](https://www.sciencedirect.com/science/article/pii/S0002939418301193) where human retinal and choroidal endothelial cells were compared. The study was 5 donor eyes where retinal and choroidal cells were collected and cultured in a paired design. The cell lysates from each of the 10 cell cultures were profiled using large-scale separations with a fast-scanning linear ion trap.
 
 > Smith, J.R., David, L.L., Appukuttan, B. and Wilmarth, P.A., 2018. Angiogenic and Immunologic Proteins Identified by Deep Proteomic Profiling of Human Retinal and Choroidal Vascular Endothelial Cells: Potential Targets for New Biologic Drugs. American journal of ophthalmology, 193, pp.197-229.
 
-### (12) [Sea_lion_urine_SpC repository](https://github.com/pwilmart/Sea_lion_urine_SpC.git)
+### (3) [Sea_lion_urine_SpC repository](https://github.com/pwilmart/Sea_lion_urine_SpC.git)
 #### [PXD009019_average_missing notebook file](https://pwilmart.github.io/TMT_analysis_examples/PXD009019_average_missing.html) - Determining the low SpC cutoff
 #### [PXD009019_QC_check notebook file](https://pwilmart.github.io/TMT_analysis_examples/PXD009019_QC_check.html) - Checking for outlier samples
 #### [PXD009019_SpC_DE notebook file](https://pwilmart.github.io/TMT_analysis_examples/PXD009019_SpC_DE.html) - Main differential expression testing
